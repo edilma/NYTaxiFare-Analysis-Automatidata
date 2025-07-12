@@ -1,6 +1,10 @@
 # NYC Taxi Tip Prediction and Fare Analysis (2017)
 
-This project analyzes the 2017 NYC Yellow Taxi trip dataset to uncover patterns in tipping behavior and fare pricing. It uses data cleaning, exploratory analysis, hypothesis testing, regression, and classification models to answer key business questions.
+![Machine Learning](https://img.shields.io/badge/Machine_Learning-Project-blue.svg)
+
+🚖 A machine learning project that uses classification and regression models to analyze tipping behavior and fare amounts in the 2017 NYC Yellow Taxi dataset.
+
+This project applies data cleaning, exploratory data analysis, hypothesis testing, multiple linear regression, and classification using Random Forest and XGBoost.
 
 ## 🔍 Project Goals
 
