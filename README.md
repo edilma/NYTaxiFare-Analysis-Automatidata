@@ -1,72 +1,98 @@
-# NYC Taxi Tip Prediction and Fare Analysis (2017)
 
-![Machine Learning](https://img.shields.io/badge/Machine_Learning-Project-blue.svg)
+---
 
-🚖 A machine learning project that uses classification and regression models to analyze tipping behavior and fare amounts in the 2017 NYC Yellow Taxi dataset.
+# 🗽 NYC Taxi Tip Prediction and Fare Analysis (2017)
 
-This project applies data cleaning, exploratory data analysis, hypothesis testing, multiple linear regression, and classification using Random Forest and XGBoost.
+**Machine Learning Project**
 
-## 🔍 Project Goals
+This is a data analytics and machine learning project focused on understanding tipping behavior and fare pricing in New York City’s yellow taxis during 2017. It was developed as part of the **Automatidata** program and demonstrates end-to-end skills in data wrangling, statistical analysis, regression, and classification modeling.
 
-- Perform end-to-end **data cleaning, feature engineering**, and EDA.
-- Test if **payment type impacts fare amount** using hypothesis testing.
-- Predict the **fare amount** using multiple linear regression.
-- Predict if a customer will **tip generously** using classification models.
+> ⚠️ **Note:** This project is still in progress and continues to be improved.
 
+---
 
-## 📁 Project Structure
+## 🎯 Project Objectives
 
-| File/Notebook                         | Description |
-|--------------------------------------|-------------|
-| `00_intro_and_setup.ipynb`           | Loads libraries and provides project setup |
-| `01_data_cleaning_eda.ipynb`         | Cleans and preprocesses the raw taxi trip data; performs exploratory data analysis (EDA) |
-| `02_hypothesis_testing.ipynb`        | Tests whether payment type influences fare using hypothesis testing |
-| `03_multiple_linear_regression_model.ipynb` | Builds a multiple linear regression model to predict fare amount |
-| `04_random_forest_modeling.ipynb`    | Builds and compares Random Forest and XGBoost models to predict generous tippers |
-| `Data_Dictionary.pdf` / `.xlsx`      | Describes dataset features |
-| `requirements.txt`                   | Python package dependencies |
+* Perform full-cycle **data cleaning**, **feature engineering**, and **exploratory data analysis (EDA)**.
+* Investigate the relationship between **payment type and fare amount** using hypothesis testing.
+* Use **multiple linear regression** to predict fare amounts.
+* Apply **tree-based models** (Random Forest and XGBoost) to classify whether a customer is likely to tip generously.
 
-## 📊 Models Used
+---
 
-- **Random Forest** and **XGBoost** for classification
-- **Multiple Linear Regression** for fare prediction
+## 🗂️ Project Structure
+
+| File                                        | Description                                                |
+| ------------------------------------------- | ---------------------------------------------------------- |
+| `00_intro_and_setup.ipynb`                  | Project setup and import of libraries                      |
+| `01_data_cleaning_eda.ipynb`                | Data cleaning, preprocessing, and exploratory analysis     |
+| `02_hypothesis_testing.ipynb`               | Tests whether payment type influences fare pricing         |
+| `03_multiple_linear_regression_model.ipynb` | Builds regression model for fare prediction                |
+| `04_random_forest_modeling.ipynb`           | Uses Random Forest and XGBoost to predict generous tipping |
+| `Data_Dictionary.pdf` / `.xlsx`             | Dataset feature descriptions                               |
+| `requirements.txt`                          | List of required Python packages                           |
+
+---
+
+## 🧠 Models Used
+
+* **Multiple Linear Regression** — for predicting fare amount
+* **Random Forest** & **XGBoost** — for classifying tipping behavior
+
+---
 
 ## 🧪 Techniques Applied
 
-- Data cleaning and transformation
-- Feature engineering (e.g., `mean_distance`, `mean_duration`)
-- Outlier detection and handling
-- Hypothesis testing (t-test)
-- Hyperparameter tuning (GridSearchCV)
-- Model evaluation: F1, Accuracy, MAE, RMSE, R²
-- Feature importance analysis
+* Data cleaning and transformation
+* Feature engineering (e.g., `mean_distance`, `mean_duration`, `rush_hour_flag`)
+* Outlier detection and handling
+* Hypothesis testing (t-test)
+* Hyperparameter tuning (GridSearchCV)
+* Model evaluation: **F1-score**, **Accuracy**, **MAE**, **RMSE**, **R²**
+* Feature importance analysis
 
-## 📦 Dependencies
+---
 
-Install the required packages with:
+## 📈 Key Results
+
+* Using the **multiple linear regression model**, we found that:
+
+  * **Mean distance** and **mean duration** were the most important features for predicting fare amount.
+  * **Rush hour** trips also influenced the final rate.
+* For **tipping behavior**:
+
+  * **VendorID\_2** was the strongest predictor of generous tipping (possibly due to better service or newer vehicles).
+  * **Passenger count** and **total fare** had more influence than trip duration or distance.
+* These insights can help taxi operators understand pricing dynamics and improve service quality to increase tips.
+
+---
+
+## 📊 Data
+
+* **Dataset**: `2017_Yellow_Taxi_Trip_Data.csv`
+* **Source**: NYC Taxi and Limousine Commission
+* **Data Dictionary**: Included in both `.pdf` and `.xlsx` formats
+
+---
+
+## 💻 Installation
+
+Install required packages with:
 
 ```bash
 pip install -r requirements.txt
-``` 
-
-### 📈 Key Results
-
-- **Random Forest outperformed XGBoost**, achieving the highest F1 score in both cross-validation and test sets.
-- **VendorID_2** was the most important feature in predicting whether a customer tips generously.
-- The **multiple linear regression model** showed a good fit for predicting taxi fares, evaluated using **R², MAE, and RMSE**.
-- **Hypothesis testing** revealed a statistically significant relationship between **payment type** and **fare amount**, suggesting that payment method may influence pricing.
+```
 
 ---
 
-### 📂 Data
+## 📜 License  
+This project is licensed under the terms of the MIT License.
 
-- **Dataset**: `2017_Yellow_Taxi_Trip_Data.csv`
-- **Source**: NYC Taxi and Limousine Commission
-- **Data Dictionary**: Included as `Data_Dictionary.pdf` and `Yellow_Taxi_Trip_Data_Data_Dictionary.xlsx`
+✨ Author  
+Built with 💻 by **Edilma Riano** using Python, pandas, and scikit-learn.
+
+🎓 Developed as part of the **Google Advanced Data Analytics Professional Certificate** to demonstrate skills in data wrangling, statistical analysis, regression, and machine learning classification.
+
 
 ---
 
-### 👩‍💻 Author
-
-This project was developed as part of the **Automatidata** program.  
-If you have questions or suggestions, feel free to explore the notebooks or get in touch!
